@@ -7,7 +7,6 @@ const Details = () => {
   const location = useLocation()
 
   const recipe = location.state.recipe1
-  //console.log(recipe);
   return (
     <DetailContainer>
       <HeaderContainer>

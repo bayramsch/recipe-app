@@ -75,8 +75,8 @@ background: #e1f1dd;
     flex-direction: column;
     width: 100%;
 
-    max-height:${({osman})=>(osman?"300px":"0")}
-    /* gap:2px; */
+    max-height:${({isOpen})=>(isOpen?"300px":"0")}
+    /* gap:2px; */ 
     /* props olarak, osman=true geldi mesela */
     
     /* 3 çizgiye ilk tıklandığında 300 px açılsın, sonraki tıklamada kapansın */

@@ -12,7 +12,7 @@ const Navbar = () => {
     <Nav>
       <Logo  to="/home" >
         <i>{"<yummy>"}</i>
-        <span>recipes</span>
+        <span> recipes</span>
       </Logo>
       <Hamburger onClick={()=>setIsOpen(!isOpen)}>
         <span/>
@@ -20,12 +20,16 @@ const Navbar = () => {
         <span/>
         {/* <GiHamburgerMenu/> */}
       </Hamburger>
-      <Menu osman={isOpen}>
-        <MenuLink onClick={()=>setIsOpen(!isOpen)}
+      <Menu isOpen={isOpen}>
+        <MenuLink 
         onMouseUp={()=>sessionStorage.clear()}
          to="/about">About</MenuLink>
-        <MenuLink to="/github">Github</MenuLink>
+        <MenuLink to="/contact">Contact</MenuLink>
+        {!isOpen ? 
         <MenuLink onClick={()=>setIsOpen(!isOpen)} to="/">Logout</MenuLink>
+        :
+        <MenuLink onClick={()=>setIsOpen(!isOpen)} to="/">Login</MenuLink>
+      }
       </Menu>
     </Nav>
   )
@@ -34,3 +38,10 @@ const Navbar = () => {
 export default Navbar
 
 /* BsEmojiSunglasses */
+
+
+/* {!isOpen ? 
+        <MenuLink onClick={()=>setIsOpen(!isOpen)} to="/">Logout</MenuLink>
+        :
+        <MenuLink onClick={()=>setIsOpen(!isOpen)} to="/">Login</MenuLink>
+      } */

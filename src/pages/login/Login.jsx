@@ -10,7 +10,7 @@ const Login = () => {
   }
 
 
-  const siteyeGir = (e) => {
+  const enterSite = (e) => {
     e.preventDefault();
     sessionStorage.setItem("user", JSON.stringify(user))
     window.location.href="/home";
@@ -22,7 +22,7 @@ const Login = () => {
       <FormContainer>
         <StyledImg src={meal} alt="mealFoto"/>
         <Header> {"<yummy/>"} Recipes</Header>
-        <StyledForm onSubmit={siteyeGir}>
+        <StyledForm onSubmit={enterSite}>
           <StyledInput type="text" placeholder="username" required/>
           <StyledInput type="password" placeholder="password" required/>
           <StyledButton type='submit'>Login</StyledButton>

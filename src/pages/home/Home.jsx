@@ -27,7 +27,7 @@ const Home = () => {
       
     
     }else {
-      console.log("Please fill the search");
+      alert("Please fill the search")
     }
     
     
